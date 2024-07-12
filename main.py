@@ -27,7 +27,7 @@ with sync_playwright() as p:
     # Visit all followers profile page
     print("Checking followers...")
     for user in users:
-        print(f"Checking {user["username"]}...")
+        print(f"Checking user {user["username"]} ...")
         page.goto(f"https://x.com/{user["username"]}")
         page.wait_for_timeout(2000)
                         
